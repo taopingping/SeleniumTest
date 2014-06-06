@@ -76,11 +76,11 @@ abstract public class WebDriver_editEventTaskIssueIT implements URL, Selectors {
 		} while (select == true);
 		firstIssue.click();
 		// save selected issues
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		driver.findElement(By.id("saveSelectedIssueForExistTaskButton"))
 				.click();
 		// ok
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@id=\"modalTwoFooter\"]/button"))
 				.click();
 
@@ -88,10 +88,7 @@ abstract public class WebDriver_editEventTaskIssueIT implements URL, Selectors {
 		driver.navigate().refresh();
 		// open a time task
 		Thread.sleep(1000);
-		driver.findElement(By.id(button_editTimeTask)).click();
-		// select a day
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(day)).click();
+		driver.findElement(By.id(button_editEventTask)).click();
 		// select task to edit
 		Thread.sleep(1000);
 		driver.findElements(By.className("editIssue")).get(0).click();
